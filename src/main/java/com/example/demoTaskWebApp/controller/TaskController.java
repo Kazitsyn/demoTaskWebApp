@@ -4,14 +4,15 @@ import com.example.demoTaskWebApp.model.Task;
 import com.example.demoTaskWebApp.model.TaskStatus;
 import com.example.demoTaskWebApp.repository.TaskRepository;
 import com.example.demoTaskWebApp.service.TaskService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@AllArgsConstructor
 public class TaskController {
-    @Autowired
     private TaskService taskService;
 
     @PostMapping("/addTask")

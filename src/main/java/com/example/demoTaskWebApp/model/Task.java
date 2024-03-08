@@ -10,12 +10,14 @@ import java.time.LocalDateTime;
 @Data
 @Component
 @Entity
+@Table(name = "Tasks")
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
     private String title;
+    @Column
     @Enumerated
     private TaskStatus status = TaskStatus.NOT_STARTED;
     @Temporal(TemporalType.TIMESTAMP)
